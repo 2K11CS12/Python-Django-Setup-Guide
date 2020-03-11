@@ -23,8 +23,8 @@ Steps to configure the application on local machine (Windows)
     workon envname 
     deactivate
     ```
- - requirements.txt
-    A `requirements.txt` file is a file that lists all of the modules needed for the Django project to work. These are all the modules, such as Django, django-allauth, mysqlclient, numpy, etc. that the Django project needs to work.
+ - #### requirements.txt
+    A `requirements.txt` file is a file that lists all of the modules needed for the Django project to work. These are all the modules, such as `Django`, `django-allauth`, `mysqlclient`, `numpy`, etc. that the Django project needs to work.
 
     So how can we create a requirements.txt file?
 
@@ -84,7 +84,8 @@ Steps to configure the application on local machine (Windows)
 ### Production & Deployment Instructions
 Coming Soon!
 
-### Setup Django with Apache/XAMMP
+### Setup Django with Apache/XAMMP (NOT TESTED)
+- `Python must be installed as adminitrator/root user.` 
 https://serverfault.com/questions/439070/apache-wont-restart-after-inserting-mod-wsgi
 https://groups.google.com/forum/#!topic/modwsgi/dVCPbhiUw90
 - Set `MOD_WSGI_APACHE_ROOTDIR` using following command`
