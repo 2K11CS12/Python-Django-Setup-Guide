@@ -85,9 +85,10 @@ Steps to configure the application on local machine (Windows)
 Coming Soon!
 
 ### Setup Django with Apache/XAMMP (NOT TESTED)
-- `Python must be installed as adminitrator/root user.` 
 https://serverfault.com/questions/439070/apache-wont-restart-after-inserting-mod-wsgi
 https://groups.google.com/forum/#!topic/modwsgi/dVCPbhiUw90
+
+- `Python must be installed as adminitrator/root user.` 
 - Set `MOD_WSGI_APACHE_ROOTDIR` using following command`
     ```
     set MOD_WSGI_APACHE_ROOTDIR=D:/xampp72/apache/
