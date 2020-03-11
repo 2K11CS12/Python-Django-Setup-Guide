@@ -23,42 +23,53 @@ Steps to configure the application on local machine (Windows)
     workon envname 
     deactivate
     ```
- - Install Django ``` v2.2.* ```
-    - If found ``` requirements.txt ``` file on root
+ - requirements.txt
+    A `requirements.txt` file is a file that lists all of the modules needed for the Django project to work. These are all the modules, such as Django, django-allauth, mysqlclient, numpy, etc. that the Django project needs to work.
+
+    So how can we create a requirements.txt file?
+
+    Well, before we do this, you may know that typing in, `pip freeze`, into your command terminal lists all of the modules that you have installed for your project.
+
+    ```
+    pip freeze
+    ```
+    we can list all of the modules with pip freeze and have a `requirements.txt` file created this listing copied to the text file.
+    ```
+    pip freeze > requirements.txt
+
+    ## To install all listed modules/libraries, run following command
+    pip install -r requirements.txt
+    ```
+
+## DJANGO APPLICATION SETUPS
+#### Make sure that, you have created virtual environment & activated
+- Install Django ``` v2.2.* ```
+    - If you maintain ``` requirements.txt ``` file, `Django==2.2.*` is listed
         ```
         pip install -r requirements.txt
         ```
     - if not, run following commands
         ```python
         pip install Django==2.2.*
-        pip install mysqlclient==1.4.*
-        pip install django[argon2]==19.2.*
-        pip install django[bcrypt]==3.1.*
-        pip install python-nmap==0.6.*
-        pip install factory-boy==2.12.0
-        pip install django-smart-selects==1.5.4
         ```
-
-## DJANGO FIRST APPLICATION SETUPS
  - Create Project
      ```python
-     django-admin makeproject projectname
+     django-admin startproject projectname
      cd projectname
-     django-admin makeapp appname
      ```
  - Create Django App
     ```python
-     django-admin makeapp appname
+     django-admin startapp appname
      ```
  - Migrations Commands
     ```python
-     python manage.py showmigrations
-     python manage.py migrate
      python manage.py makemigrations
+     python manage.py migrate
+     python manage.py showmigrations
      ### OR ###
-     django-admin showmigrations
-     django-admin migrate
      django-admin makemigrations
+     django-admin migrate
+     django-admin showmigrations
      ```
  - Create Super USER
     ```
@@ -69,41 +80,9 @@ Steps to configure the application on local machine (Windows)
     python manage.py runserver
     ```
  - Open link on browser ``` http://127.0.0.1:8000/ ```
-### Plugins
-
-Currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
-
-| Plugin | Link |
-| ------ | ------ |
-| Python N-MAP | [https://pypi.org/project/python-nmap/][nmap] |
-| mysqlclient | [https://pypi.org/project/mysqlclient/][msql] |
-
-
-### Data Seeding and Fixtures Instructions
-I we are using fixture then we need the following two commands.
-
-# Data exporting through fixtures by using following commmands
-# by using model name
-python manage.py dumpdata <appname>.<modelname> > fixtures/appname/file.json 
-
-# by using table name
-python manage.py dumpdata <appname>.<tablename> > fixtures/appname/file.json 
-
-# Data importing through fixtures by using this command
-python manage.py loaddata fixtures/appname/file.json
-
 
 ### Production & Deployment Instructions
 Coming Soon!
-
-### Misc
- - Get list of all installed packages and their versions
-    ```
-    pip freeze
-    pip freeze > requirements.txt # Save all the packages in the file with
-    python manage.py dumpdata auth.user --indent 4 > user.json # dumpdata to create fixtures
-    python manage.py loaddata user.json # To fill your models with Fixtures
-    ```
 
 ### Setup Django with Apache/XAMMP
 https://serverfault.com/questions/439070/apache-wont-restart-after-inserting-mod-wsgi
@@ -153,7 +132,7 @@ https://groups.google.com/forum/#!topic/modwsgi/dVCPbhiUw90
 
 License
 ----
-All rights reserved by ``` Certstation ```
+All rights reserved by ``` Me ```
 
    [nmap]: <https://pypi.org/project/python-nmap/>
    [msql]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
