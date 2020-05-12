@@ -159,7 +159,7 @@ https://groups.google.com/forum/#!topic/modwsgi/dVCPbhiUw90
 - Restart the apache service, you sholud be able to access the application at `http://local.python.com`
 License
 ----
-All rights reserved
+All rights reserved by Mangrio
 
    [nmap]: <https://pypi.org/project/python-nmap/>
    [msql]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
